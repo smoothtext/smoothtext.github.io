@@ -517,7 +517,7 @@ of required resources and provides a consistent API across different backends.</
 - Readability scoring using various formulas
 - Reading time estimation
 - Language-specific text processing
-- Emoji handling and number verbalization</p>
+- Emoji handling</p>
 <p>Supported backends:
 - NLTK
 - Stanza</p>
@@ -1009,29 +1009,6 @@ list[list[str]]: List of sentences containing lists of tokens if split_sentences
 <span class="gp">&gt;&gt;&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sent_tokens</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="s2">&quot;Hi there. Bye now.&quot;</span><span class="p">,</span> <span class="n">split_sentences</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Returns: [[&quot;Hi&quot;, &quot;there&quot;, &quot;.&quot;], [&quot;Bye&quot;, &quot;now&quot;, &quot;.&quot;]]</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="smoothtext.smoothtext.SmoothText.verbalize_number">
-<span class="sig-name descname"><span class="pre">verbalize_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.smoothtext.SmoothText.verbalize_number" title="Link to this definition"></a></dt>
-<dd><p>Convert a number to its word representation in the configured language.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>number</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – Number to convert to words</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Word representation of the number</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">text</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">verbalize_number</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Returns: &quot;forty-two&quot; (in English)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Returns: &quot;kırk iki&quot; (in Turkish)</span>
 </pre></div>
 </div>
 </dd></dl>
