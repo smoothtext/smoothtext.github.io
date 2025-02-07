@@ -428,6 +428,27 @@ Note: The order of returned languages is not guaranteed.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">variants</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get a list of all language variants for the current language.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of all language variants, including the current language</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[Language]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Language</span><span class="o">.</span><span class="n">English_GB</span><span class="o">.</span><span class="n">variants</span><span class="p">()</span>
+<span class="go">[Language.English_GB, Language.English_US]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Language</span><span class="o">.</span><span class="n">English</span><span class="o">.</span><span class="n">variants</span><span class="p">()</span>
+<span class="go">[Language.English_GB, Language.English_US]</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </dd></dl>
 
 </section>
