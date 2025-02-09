@@ -264,6 +264,12 @@ variants (e.g., English_US) belong to a parent language (e.g., English).</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">German</span></span></dt>
+<dd><p>Generic German language support</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">Turkish</span></span></dt>
 <dd><p>Generic Turkish language support</p>
 </dd></dl>
@@ -276,13 +282,24 @@ variants (e.g., English_US) belong to a parent language (e.g., English).</p>
 <dl class="py attribute">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">English_GB</span></span></dt>
-<dd><p>British English variant (default for ‘en’)</p>
+<dd><p>British English variant</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">English_US</span></span></dt>
-<dd><p>American English variant</p>
+<dd><p>American English variant (default for ‘en’)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">#</span> <span class="pre">German</span> <span class="pre">Variants</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">German_DE</span></span></dt>
+<dd><p>German (Germany) variant (default for ‘de’)</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -464,17 +481,8 @@ text complexity in different languages. Each formula is designed for specific
 languages and provides different metrics for text readability.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Atesman</span></span></dt>
-<dd><p>Turkish readability formula developed by Ateşman.
-Scores range from 0 (hardest) to 100 (easiest).</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Bezirci_Yilmaz</span></span></dt>
-<dd><p>Turkish readability formula by Bezirci and Yılmaz.
-Provides grade-level assessment for Turkish texts.</p>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">#</span> <span class="pre">English</span> <span class="pre">Formulas</span></span></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
@@ -495,6 +503,64 @@ Indicates US grade level required to understand the text.</p>
 <span class="sig-name descname"><span class="pre">Flesch_Kincaid_Grade_Simplified</span></span></dt>
 <dd><p>Simplified version of Flesch-Kincaid Grade.
 Uses reduced parameters for grade-level assessment.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">#</span> <span class="pre">German</span> <span class="pre">Formulas</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Wiener_Sachtextformel</span></span></dt>
+<dd><p>Alias for Wiener_Sachtextformel_3 (general purpose formula).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Wiener_Sachtextformel_1</span></span></dt>
+<dd><p>First variant of Wiener Sachtextformel.
+Optimized for narrative texts.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Wiener_Sachtextformel_2</span></span></dt>
+<dd><p>Second variant of Wiener Sachtextformel.
+Optimized for scientific texts.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Wiener_Sachtextformel_3</span></span></dt>
+<dd><p>Third variant of Wiener Sachtextformel.
+General purpose formula.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Wiener_Sachtextformel_4</span></span></dt>
+<dd><p>Fourth variant of Wiener Sachtextformel.
+Alternative general purpose formula.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">#</span> <span class="pre">Turkish</span> <span class="pre">Formulas</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Atesman</span></span></dt>
+<dd><p>Turkish readability formula developed by Ateşman.
+Scores range from 0 (hardest) to 100 (easiest).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Bezirci_Yilmaz</span></span></dt>
+<dd><p>Turkish readability formula by Bezirci and Yılmaz.
+Provides grade-level assessment for Turkish texts.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -544,6 +610,7 @@ of required resources and provides a consistent API across different backends.</
 - Stanza</p>
 <p>Supported languages:
 - English
+- German
 - Turkish</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">st</span> <span class="o">=</span> <span class="n">SmoothText</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s2">&quot;nltk&quot;</span><span class="p">)</span>
@@ -639,11 +706,6 @@ Higher scores indicate more difficult readability.</p>
 <dd class="field-odd"><p>float</p>
 </dd>
 </dl>
-<p>Supported formulas:
-- Flesch Reading Ease (English, Turkish)
-- Ateşman (Turkish)
-- Flesch-Kincaid Grade Level (English)
-- Bezirci-Yılmaz (Turkish)</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">score</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">compute_readability</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">ReadabilityFormula</span><span class="o">.</span><span class="n">Flesch_Reading_Ease</span><span class="p">)</span>
 </pre></div>
@@ -1030,6 +1092,144 @@ list[list[str]]: List of sentences containing lists of tokens if split_sentences
 <span class="gp">&gt;&gt;&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sent_tokens</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="s2">&quot;Hi there. Bye now.&quot;</span><span class="p">,</span> <span class="n">split_sentences</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Returns: [[&quot;Hi&quot;, &quot;there&quot;, &quot;.&quot;], [&quot;Bye&quot;, &quot;now&quot;, &quot;.&quot;]]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="smoothtext.smoothtext.SmoothText.wiener_sachtextformel">
+<span class="sig-name descname"><span class="pre">wiener_sachtextformel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">demojize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.smoothtext.SmoothText.wiener_sachtextformel" title="Link to this definition"></a></dt>
+<dd><p>Calculate Wiener Sachtextformel readability score for German text.
+The score takes into account sentence length and frequency of words with different lengths.
+Higher scores indicate more difficult text.</p>
+<p>Score ranges:
+4-5: Very easy
+6-8: Easy
+9-11: Average
+12-14: Difficult
+15+: Very difficult</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Input German text to analyze</p></li>
+<li><p><strong>demojize</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span>) – If True, convert emojis to text before scoring</p></li>
+<li><p><strong>version</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – Wiener Sachtextformel version to use (1-4)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Wiener Sachtextformel readability score (higher = more difficult)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">score</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">wiener_sachtextformel</span><span class="p">(</span><span class="s2">&quot;Deutscher Textbeispiel.&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">score</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">wiener_sachtextformel</span><span class="p">(</span><span class="s2">&quot;Deutscher Textbeispiel.&quot;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="smoothtext.smoothtext.SmoothText.wiener_sachtextformel_1">
+<span class="sig-name descname"><span class="pre">wiener_sachtextformel_1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">demojize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.smoothtext.SmoothText.wiener_sachtextformel_1" title="Link to this definition"></a></dt>
+<dd><p>Calculate Wiener Sachtextformel readability score for German text.
+The score takes into account sentence length and frequency of words with different lengths.
+Higher scores indicate more difficult text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Input German text to analyze</p></li>
+<li><p><strong>demojize</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span>) – If True, convert emojis to text before scoring</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Wiener Sachtextformel readability score (higher = more difficult)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">score</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">wiener_sachtextformel_1</span><span class="p">(</span><span class="s2">&quot;Deutscher Textbeispiel.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="smoothtext.smoothtext.SmoothText.wiener_sachtextformel_2">
+<span class="sig-name descname"><span class="pre">wiener_sachtextformel_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">demojize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.smoothtext.SmoothText.wiener_sachtextformel_2" title="Link to this definition"></a></dt>
+<dd><p>Calculate Wiener Sachtextformel readability score for German text.
+The score takes into account sentence length and frequency of words with different lengths.
+Higher scores indicate more difficult text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Input German text to analyze</p></li>
+<li><p><strong>demojize</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span>) – If True, convert emojis to text before scoring</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Wiener Sachtextformel readability score (higher = more difficult)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">score</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">wiener_sachtextformel_2</span><span class="p">(</span><span class="s2">&quot;Deutscher Textbeispiel.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="smoothtext.smoothtext.SmoothText.wiener_sachtextformel_3">
+<span class="sig-name descname"><span class="pre">wiener_sachtextformel_3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">demojize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.smoothtext.SmoothText.wiener_sachtextformel_3" title="Link to this definition"></a></dt>
+<dd><p>Calculate Wiener Sachtextformel readability score for German text.
+The score takes into account sentence length and frequency of words with different lengths.
+Higher scores indicate more difficult text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Input German text to analyze</p></li>
+<li><p><strong>demojize</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span>) – If True, convert emojis to text before scoring</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Wiener Sachtextformel readability score (higher = more difficult)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">score</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">wiener_sachtextformel_3</span><span class="p">(</span><span class="s2">&quot;Deutscher Textbeispiel.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="smoothtext.smoothtext.SmoothText.wiener_sachtextformel_4">
+<span class="sig-name descname"><span class="pre">wiener_sachtextformel_4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">demojize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.smoothtext.SmoothText.wiener_sachtextformel_4" title="Link to this definition"></a></dt>
+<dd><p>Calculate Wiener Sachtextformel readability score for German text.
+The score takes into account sentence length and frequency of words with different lengths.
+Higher scores indicate more difficult text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Input German text to analyze</p></li>
+<li><p><strong>demojize</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span>) – If True, convert emojis to text before scoring</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Wiener Sachtextformel readability score (higher = more difficult)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">score</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">wiener_sachtextformel_4</span><span class="p">(</span><span class="s2">&quot;Deutscher Textbeispiel.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
