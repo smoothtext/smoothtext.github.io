@@ -349,6 +349,20 @@ variants (e.g., English_US) belong to a parent language (e.g., English).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">families</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get a list of all base language families.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List containing all base Language enum values</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[Language]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">family</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Get the family (base) language of the current language variant.</p>
 <p>The family language represents the base language without region/country specifics.
@@ -427,6 +441,31 @@ Note: The order of returned languages is not guaranteed.</p>
 <span class="go">[Language.English_GB, Language.Turkish_TR]  # or [Language.Turkish_TR, Language.English_GB]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">set</span><span class="p">(</span><span class="n">Language</span><span class="o">.</span><span class="n">parse_multiple</span><span class="p">([</span><span class="s1">&#39;en&#39;</span><span class="p">,</span> <span class="s1">&#39;invalid&#39;</span><span class="p">,</span> <span class="s1">&#39;tr&#39;</span><span class="p">]))</span>  <span class="c1"># Use set for order-independent comparison</span>
 <span class="go">{Language.English_GB, Language.Turkish_TR}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">readability_formulas</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get a list of supported readability formulas for the current language.</p>
+<p>Different languages have different readability formulas that are specifically
+designed and validated for their linguistic characteristics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of readability formulas supported for this language</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[ReadabilityFormula]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Language</span><span class="o">.</span><span class="n">English</span><span class="o">.</span><span class="n">readability_formulas</span><span class="p">()</span>
+<span class="go">[ReadabilityFormula.Flesch_Reading_Ease,</span>
+<span class="go"> ReadabilityFormula.Flesch_Kincaid_Grade,</span>
+<span class="go"> ReadabilityFormula.Flesch_Kincaid_Grade_Simplified]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Language</span><span class="o">.</span><span class="n">Turkish</span><span class="o">.</span><span class="n">readability_formulas</span><span class="p">()</span>
+<span class="go">[ReadabilityFormula.Atesman, ReadabilityFormula.Bezirci_Yilmaz]</span>
 </pre></div>
 </div>
 </dd></dl>
