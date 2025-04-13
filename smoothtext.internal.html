@@ -131,16 +131,10 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="smoothtext.internal.syllabifier.SyllabifierGer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">smoothtext.internal.syllabifier.</span></span><span class="sig-name descname"><span class="pre">SyllabifierGer</span></span><a class="headerlink" href="#smoothtext.internal.syllabifier.SyllabifierGer" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#smoothtext.internal.syllabifier.SyllabifierPyphenBase" title="smoothtext.internal.syllabifier.SyllabifierPyphenBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">SyllabifierPyphenBase</span></code></a></p>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="smoothtext.internal.syllabifier.SyllabifierPyphenBase">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">smoothtext.internal.syllabifier.</span></span><span class="sig-name descname"><span class="pre">SyllabifierPyphenBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.internal.syllabifier.SyllabifierPyphenBase" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#smoothtext.internal.syllabifier.SyllabifierBase" title="smoothtext.internal.syllabifier.SyllabifierBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">SyllabifierBase</span></code></a></p>
 <dl class="py method">
-<dt class="sig sig-object py" id="smoothtext.internal.syllabifier.SyllabifierPyphenBase.count">
-<span class="sig-name descname"><span class="pre">count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.internal.syllabifier.SyllabifierPyphenBase.count" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="smoothtext.internal.syllabifier.SyllabifierGer.count">
+<span class="sig-name descname"><span class="pre">count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.internal.syllabifier.SyllabifierGer.count" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span></p>
@@ -149,8 +143,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="smoothtext.internal.syllabifier.SyllabifierPyphenBase.syllabify">
-<span class="sig-name descname"><span class="pre">syllabify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.internal.syllabifier.SyllabifierPyphenBase.syllabify" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="smoothtext.internal.syllabifier.SyllabifierGer.syllabify">
+<span class="sig-name descname"><span class="pre">syllabify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.internal.syllabifier.SyllabifierGer.syllabify" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</span></p>
@@ -158,12 +152,6 @@
 </dl>
 </dd></dl>
 
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="smoothtext.internal.syllabifier.SyllabifierRus">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">smoothtext.internal.syllabifier.</span></span><span class="sig-name descname"><span class="pre">SyllabifierRus</span></span><a class="headerlink" href="#smoothtext.internal.syllabifier.SyllabifierRus" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#smoothtext.internal.syllabifier.SyllabifierPyphenBase" title="smoothtext.internal.syllabifier.SyllabifierPyphenBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">SyllabifierPyphenBase</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
@@ -219,32 +207,12 @@
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="smoothtext.internal.tokenizer.NLTKTokenizer.word_frequencies">
-<span class="sig-name descname"><span class="pre">word_frequencies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lemmatize</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.internal.tokenizer.NLTKTokenizer.word_frequencies" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</span></p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="smoothtext.internal.tokenizer.StanzaTokenizer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">smoothtext.internal.tokenizer.</span></span><span class="sig-name descname"><span class="pre">StanzaTokenizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.internal.tokenizer.StanzaTokenizer" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#smoothtext.internal.tokenizer.TokenizerBase" title="smoothtext.internal.tokenizer.TokenizerBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">TokenizerBase</span></code></a></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="smoothtext.internal.tokenizer.StanzaTokenizer.processors">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">processors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.internal.tokenizer.StanzaTokenizer.processors" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="smoothtext.internal.tokenizer.StanzaTokenizer.sentencize">
 <span class="sig-name descname"><span class="pre">sentencize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.internal.tokenizer.StanzaTokenizer.sentencize" title="Link to this definition"></a></dt>
@@ -261,16 +229,6 @@
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</span></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="smoothtext.internal.tokenizer.StanzaTokenizer.word_frequencies">
-<span class="sig-name descname"><span class="pre">word_frequencies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lemmatize</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.internal.tokenizer.StanzaTokenizer.word_frequencies" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</span></p>
 </dd>
 </dl>
 </dd></dl>
@@ -297,16 +255,6 @@
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</span></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="smoothtext.internal.tokenizer.TokenizerBase.word_frequencies">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">word_frequencies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lemmatize</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.internal.tokenizer.TokenizerBase.word_frequencies" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</span></p>
 </dd>
 </dl>
 </dd></dl>

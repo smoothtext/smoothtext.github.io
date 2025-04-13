@@ -270,12 +270,6 @@ variants (e.g., English_US) belong to a parent language (e.g., English).</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Russian</span></span></dt>
-<dd><p>Generic Russian language support</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">Turkish</span></span></dt>
 <dd><p>Generic Turkish language support</p>
 </dd></dl>
@@ -306,17 +300,6 @@ variants (e.g., English_US) belong to a parent language (e.g., English).</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">German_DE</span></span></dt>
 <dd><p>German (Germany) variant (default for ‘de’)</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">#</span> <span class="pre">Russian</span> <span class="pre">Variants</span></span></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Russian_RU</span></span></dt>
-<dd><p>Russian (Russia) variant (default for ‘ru’)</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -478,11 +461,9 @@ designed and validated for their linguistic characteristics.</p>
 </dl>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Language</span><span class="o">.</span><span class="n">English</span><span class="o">.</span><span class="n">readability_formulas</span><span class="p">()</span>
-<span class="go">[ReadabilityFormula.Automated_Readability_Index,</span>
-<span class="go"> ReadabilityFormula.Flesch_Reading_Ease,</span>
+<span class="go">[ReadabilityFormula.Flesch_Reading_Ease,</span>
 <span class="go"> ReadabilityFormula.Flesch_Kincaid_Grade,</span>
-<span class="go"> ReadabilityFormula.Flesch_Kincaid_Grade_Simplified,</span>
-<span class="go"> ReadabilityFormula.Gunning_Fog_Index]</span>
+<span class="go"> ReadabilityFormula.Flesch_Kincaid_Grade_Simplified]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Language</span><span class="o">.</span><span class="n">Turkish</span><span class="o">.</span><span class="n">readability_formulas</span><span class="p">()</span>
 <span class="go">[ReadabilityFormula.Atesman, ReadabilityFormula.Bezirci_Yilmaz]</span>
 </pre></div>
@@ -529,22 +510,6 @@ designed and validated for their linguistic characteristics.</p>
 </section>
 <section id="smoothtext-readability-module">
 <h2>smoothtext.readability module<a class="headerlink" href="#smoothtext-readability-module" title="Link to this heading"></a></h2>
-<p>Readability formulas module for SmoothText.</p>
-<p>This module provides an enumeration of various readability formulas that can
-be used to assess text complexity in different languages. Each formula is
-designed for specific languages and provides different metrics for text
-readability.</p>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">smoothtext</span><span class="w"> </span><span class="kn">import</span> <span class="n">ReadabilityFormula</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">formula</span> <span class="o">=</span> <span class="n">ReadabilityFormula</span><span class="o">.</span><span class="n">Flesch_Reading_Ease</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">formula</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-<span class="go">Flesch Reading Ease</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">formula</span><span class="o">.</span><span class="n">supports</span><span class="p">(</span><span class="n">Language</span><span class="o">.</span><span class="n">English</span><span class="p">))</span>
-<span class="go">True</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">formula</span><span class="o">.</span><span class="n">supports</span><span class="p">(</span><span class="n">Language</span><span class="o">.</span><span class="n">Turkish</span><span class="p">))</span>
-<span class="go">False</span>
-</pre></div>
-</div>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">smoothtext.readability.</span></span><span class="sig-name descname"><span class="pre">ReadabilityFormula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span></dt>
@@ -557,12 +522,6 @@ languages and provides different metrics for text readability.</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">#</span> <span class="pre">English</span> <span class="pre">Formulas</span></span></dt>
 <dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Automated_Readability_Index</span></span></dt>
-<dd><p>English readability formula developed by the US Army.</p>
-</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
@@ -583,12 +542,6 @@ Indicates US grade level required to understand the text.</p>
 <span class="sig-name descname"><span class="pre">Flesch_Kincaid_Grade_Simplified</span></span></dt>
 <dd><p>Simplified version of Flesch-Kincaid Grade.
 Uses reduced parameters for grade-level assessment.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Gunning_Fog_Index</span></span></dt>
-<dd><p>English readability formula developed by Robert Gunning.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -632,18 +585,6 @@ Alternative general purpose formula.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">#</span> <span class="pre">Russian</span> <span class="pre">Formulas</span></span></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Matskovskiy</span></span></dt>
-<dd><p>Russian readability formula developed by Matskovskiy.
-Provides grade-level assessment for Russian texts.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">#</span> <span class="pre">Turkish</span> <span class="pre">Formulas</span></span></dt>
 <dd></dd></dl>
 
@@ -667,15 +608,10 @@ Provides grade-level assessment for Turkish texts.</p>
 <dd><p>Determines if the formula supports the specified language.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>language</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Language</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]</span>) – The language to check support for.
-Can be either a Language enum value or a string identifier.</p>
+<dd class="field-odd"><p><strong>language</strong> (<em>Language</em>) – The language to check for formula support.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p>True if the formula supports the specified language.</p></li>
-<li><p>False if the formula does not support the language.</p></li>
-</ul>
-</p>
+<dd class="field-even"><p>True if the formula supports the specified language, False otherwise.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
@@ -1092,28 +1028,6 @@ Default speed is 183 WPM based on research averages.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="smoothtext.smoothtext.SmoothText.remove_emojis">
-<span class="sig-name descname"><span class="pre">remove_emojis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.smoothtext.SmoothText.remove_emojis" title="Link to this definition"></a></dt>
-<dd><p>Remove emoji characters from the text.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>text</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Input text containing emojis</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Text with emojis removed</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">text</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">remove_emojis</span><span class="p">(</span><span class="s2">&quot;I love 🐈&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Returns: &quot;I love &quot;</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="smoothtext.smoothtext.SmoothText.sentencize">
 <span class="sig-name descname"><span class="pre">sentencize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.smoothtext.SmoothText.sentencize" title="Link to this definition"></a></dt>
 <dd><p>Split text into sentences using the configured backend tokenizer.</p>
@@ -1355,31 +1269,6 @@ Higher scores indicate more difficult text.</p>
 </dl>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">score</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">wiener_sachtextformel_4</span><span class="p">(</span><span class="s2">&quot;Deutscher Textbeispiel.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="smoothtext.smoothtext.SmoothText.word_frequencies">
-<span class="sig-name descname"><span class="pre">word_frequencies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lemmatize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smoothtext.smoothtext.SmoothText.word_frequencies" title="Link to this definition"></a></dt>
-<dd><p>Count the frequency of words in the text.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>text</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Input text to analyze</p></li>
-<li><p><strong>lemmatize</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span>) – If True, lemmatize words before counting</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Dictionary of word frequencies</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>dict[str, int]</p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">freqs</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">word_frequencies</span><span class="p">(</span><span class="s2">&quot;Hello world! Hello again.&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Returns: {&quot;hello&quot;: 2, &quot;world&quot;: 1, &quot;again&quot;: 1}</span>
 </pre></div>
 </div>
 </dd></dl>
